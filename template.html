@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>                                                                     <!--site title-->
+    <meta name="description" content="">                                                <!--short site description-->
+    <meta name="author" content="webdevgroup">
+    <link rel="canonical" href="https://example.com/this-page/">                                                <!--home page-->
+
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">         <!-- Crawling & indexing -->
+
+    <!--pagination| only if more then 1 page-->
+    <link rel="prev" href="https://example.com/this-page/page/1/">
+    <link rel="next" href="https://example.com/this-page/page/3/">
+
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#1d2a35">
+
+    <meta property="og:locale" content="en_EN">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="github">
+    <meta property="og:description" content="Main github">
+    <meta property="og:url" content="https://github.com/Selector0073">
+    <meta property="og:site_name" content="">                                                           <!--site name-->
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Group",
+                    "name": "webdevgroup",
+                    "url": "https://github.com/Selector0073/webdevgroup/",
+                },
+                {
+                    "@type": "WebSite",
+                    "url": "https://github.com/Selector0073/webdevgroup/",
+                    "name": "",                                                     //site name
+                    "publisher": { "@id": "https://example.com/#org" },
+                    "potentialAction": {
+                        "@type": "SearchAction",
+                        "target": "https://example.com/search?q={search_term_string}",
+                        "query-input": "required name=search_term_string"
+                    }
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "Головна", "item": "https://example.com/" },                      // list of all sites
+                        { "@type": "ListItem", "position": 2, "name": "Категорія", "item": "https://example.com/category/" },
+                        { "@type": "ListItem", "position": 3, "name": "Поточна сторінка", "item": "https://example.com/this-page/" }
+                    ]
+                }
+            ]
+        }
+    </script>
+
+    <!--performance-->
+    <!--<link rel="preload" href="css/main.css" as="style">-->         <!--CSS / later with JS/Dart-->
+    <link rel="stylesheet" href="main.css">
+
+    <meta name="mobile-web-app-capable" content="yes">
+</head>
+<body>
+    <header> 
+        <h1><!--theme--></h1>
+        <nav aria-label="Головне меню">
+            <!--navigation-->
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <!--content-->
+            </article>
+        </section>
+    </main>
+    <footer>Selector0073 | Каріна Батура | Катя Каташинська</footer>
+</body>
+</html>
