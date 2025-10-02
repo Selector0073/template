@@ -1,7 +1,18 @@
+:root {
+    --main-bg: #1d2a35;
+    --sec-bg: #15202b;
+    --thr-bg: #0d1721;
+    --btn: #059862;
+    --interactive-bg: #e7e9eb;
+    --text: #9eefff;
+    --sec-text: #92c0dd;
+    --pop-up: #2d3748;
+}
+
 body {
     font-family: "Lucida Console", "Courier New", monospace;
-    background-color: #1d2a35;
-    color: #dddddd;
+    background-color: var(--main-bg);
+    color: var(--text);
     margin: 0;
     padding: 0;
 }
@@ -23,3 +34,215 @@ h1 {
     text-align: center;
     margin-top: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+### 1. **Базові селектори**
+
+* `*` — універсальний селектор, вибирає всі елементи.
+
+  ```css
+  * { margin: 0; padding: 0; }
+  ```
+
+---
+
+### 2. **Комбінатори**
+
+* `A B` — нащадок. Вибирає всі `B` всередині `A`.
+
+  ```css
+  div p { color: green; }
+  ```
+
+* `A > B` — прямий дочірній елемент.
+
+  ```css
+  ul > li { list-style: none; }
+  ```
+
+* `A + B` — сусідній елемент одразу після `A`.
+
+  ```css
+  h1 + p { font-weight: bold; }
+  ```
+
+* `A ~ B` — всі наступні сусіди після `A`.
+
+  ```css
+  h1 ~ p { color: gray; }
+  ```
+
+---
+
+### 3. **Псевдокласи**
+
+* `:hover` — коли мишка над елементом.
+
+  ```css
+  a:hover { color: orange; }
+  ```
+
+* `:active` — під час кліку.
+
+  ```css
+  button:active { transform: scale(0.95); }
+  ```
+
+* `:focus` — коли елемент у фокусі (input).
+
+  ```css
+  input:focus { border-color: blue; }
+  ```
+
+* `:first-child` / `:last-child` — перший або останній дочірній елемент.
+
+  ```css
+  li:first-child { font-weight: bold; }
+  ```
+
+* `:nth-child(n)` — вибір за порядковим номером.
+
+  ```css
+  li:nth-child(2) { color: red; }
+  ```
+
+* `:not(selector)` — вибір всіх, крім певних.
+
+  ```css
+  p:not(.special) { color: black; }
+  ```
+
+* `:checked` — для чекбоксів/радіокнопок.
+
+  ```css
+  input:checked { background: yellow; }
+  ```
+
+---
+
+### 4. **Псевдоелементи**
+
+* `::before` / `::after` — вставляють вміст до/після елемента.
+
+p::before {
+  content: ">> ";           >> Привіт
+  color: red;
+  font-weight: bold;
+}
+    
+
+
+  ```css
+  p::before { content: ">> "; }
+  ```
+
+* `::first-letter` — стилізація першої літери.
+
+  ```css
+  p::first-letter { font-size: 2em; }
+  ```
+
+* `::first-line` — стилізація першого рядка.
+
+  ```css
+  p::first-line { text-transform: uppercase; }
+  ```
+
+* `::selection` — стилізація виділеного тексту.
+
+  ```css
+  ::selection { background: yellow; }
+  ```
+
+---
+
+### 5. **Атрибутні селектори**
+
+* `[attr]` — вибирає елементи з атрибутом.
+
+  ```css
+  input[type] { border: 1px solid; }
+  ```
+
+* `[attr="value"]` — точне значення.
+
+  ```css
+  input[type="text"] { color: blue; }
+  ```
+
+* `[attr~="value"]` — слово серед атрибутів.
+
+  ```css
+  [title~="warning"] { color: red; }
+  ```
+
+* `[attr^="value"]` — починається з `value`.
+
+  ```css
+  a[href^="https"] { color: green; }
+  ```
+
+* `[attr$="value"]` — закінчується на `value`.
+
+  ```css
+  a[href$=".pdf"] { color: red; }
+  ```
+
+* `[attr*="value"]` — містить `value` будь-де.
+
+  ```css
+  a[href*="login"] { text-decoration: underline; }
+  ```
+
+---
+
+### 6. **Спеціальні селектори**
+
+* `:root` — корінь документа (аналог `<html>`). Зручно для змінних.
+
+  ```css
+  :root {
+    --main-color: blue;
+  }
+  body {
+    color: var(--main-color);
+  }
+  ```
+
+* `:lang(code)` — стилізація для мови.
+
+  ```css
+  p:lang(en) { font-style: italic; }
+  ```
+
+* `:empty` — елементи без вмісту.
+
+  ```css
+  div:empty { display: none; }
+  ```
+
+* `:disabled` / `:enabled` — стан інпутів.
+
+  ```css
+  input:disabled { background: #ccc; }
+  ```
+
+* `:valid` / `:invalid` — перевірка форми.
+
+  ```css
+  input:invalid { border: 2px solid red; }
+  ```
+*/
